@@ -1,0 +1,39 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Database files
+*.db
+*.sqlite3
+
+# Local Environment Variables
+.env
+
+# Generated Reports and Outputs
+reports/tearsheets/
+reports/sector/
+reports/portfolio/
+reports/radar_charts/
+reports/pytest_report.html
+output/
+
+# Raw Downloads
+drive-download-*
+*.zip
+
+# IDEs and Editors
+.vscode/
+.idea/
+.ipynb_checkpoints/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
