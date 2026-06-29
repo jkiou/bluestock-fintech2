@@ -65,7 +65,7 @@ export default function PeerComparison() {
   // Combine companies with latest ratios
   const mergedData = companies.map((c) => {
     const r = ratios.find((ratio) => ratio.company_id === c.id) || {};
-    return { ...c, ...r };
+    return { ...r, ...c };
   });
 
   // Get current group member data

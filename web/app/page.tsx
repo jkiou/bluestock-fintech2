@@ -55,7 +55,7 @@ export default function Home() {
   // Top 15 by market cap
   const top15 = companies.slice(0, 15).map(c => {
     const r = ratios.find(r => r.company_id === c.id) ?? {};
-    return { ...c, ...r };
+    return { ...r, ...c };
   });
 
   return (

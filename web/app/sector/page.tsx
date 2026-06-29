@@ -57,7 +57,7 @@ export default function SectorAnalysis() {
     const r = ratios.find((ratio) => ratio.company_id === c.id) || {};
     const companyPl = pl.filter((p) => p.company_id === c.id).sort((a, b) => b.year.localeCompare(a.year));
     const latestSales = companyPl.length > 0 ? companyPl[0].sales : 0;
-    return { ...c, ...r, sales: latestSales };
+    return { ...r, ...c, sales: latestSales };
   });
 
   const activeKpi = KPI_CHOICES.find((k) => k.key === selectedKpi) || KPI_CHOICES[0];
