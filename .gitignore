@@ -11,6 +11,7 @@ env/
 
 # Database files
 *.db
+!data/nifty100.db
 *.sqlite3
 
 # Local Environment Variables

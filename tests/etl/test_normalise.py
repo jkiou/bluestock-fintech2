@@ -27,7 +27,7 @@ TICKER_TEST_CASES = [
     ("NONE", "MISSING"),
     ("NULL", "MISSING"),
     (123, "123"),
-    ("inf", "INF")
+    ("inf", "INF"),
 ]
 
 # 20+ test cases for normalize_year
@@ -65,12 +65,14 @@ YEAR_TEST_CASES = [
     ("nan", "PARSE_ERROR"),
     (None, "PARSE_ERROR"),
     ("invalid-month-12", "PARSE_ERROR"),
-    ("FY", "PARSE_ERROR")
+    ("FY", "PARSE_ERROR"),
 ]
+
 
 @pytest.mark.parametrize("ticker_input, expected", TICKER_TEST_CASES)
 def test_normalize_ticker(ticker_input, expected):
     assert normalize_ticker(ticker_input) == expected
+
 
 @pytest.mark.parametrize("year_input, expected", YEAR_TEST_CASES)
 def test_normalize_year(year_input, expected):

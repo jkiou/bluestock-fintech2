@@ -1,0 +1,6 @@
+{
+  "buildCommand": "node scripts/export-data.js && next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install"
+}
