@@ -54,10 +54,10 @@ export default function CapitalAllocation() {
   const getAllocatedData = () => {
     if (cf.length === 0 || companies.length === 0) return [];
 
-    const latestYear = String(Math.max(...cf.map((c) => parseInt(c.year)).filter((y) => !isNaN(y))));
+    const latestYear = Math.max(...cf.map((c) => parseInt(c.year)).filter((y) => !isNaN(y)));
 
     return companies.map((comp) => {
-      const compCf = cf.filter((c) => c.company_id === comp.id && String(c.year) === latestYear);
+      const compCf = cf.filter((c) => c.company_id === comp.id && parseInt(c.year) === latestYear);
       if (compCf.length === 0) return null;
 
       const cfo = compCf[0].operating_activity ?? 0;
