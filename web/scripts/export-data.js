@@ -6,7 +6,7 @@ const Database = require('better-sqlite3');
 const fs = require('fs');
 const path = require('path');
 
-const DB_PATH = path.resolve(__dirname, '../../data/nifty100.db');
+const DB_PATH = path.resolve(__dirname, '../data/nifty100.db');
 const OUT_DIR  = path.resolve(__dirname, '../public/data');
 
 fs.mkdirSync(OUT_DIR, { recursive: true });
